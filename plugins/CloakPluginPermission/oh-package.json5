@@ -8,8 +8,19 @@
   "license": "Apache-2.0",
   "main": "Index.ets",
   "dependencies": {
-    "@wisdomgarden/cloak": "^1.0.1"
+    "@wisdomgarden/cloak": "^1.0.2"
   },
   "devDependencies": {},
-  "dynamicDependencies": {}
+  "dynamicDependencies": {},
+  "keywords": [
+    "Cloak",
+    "CloakPlugin",
+    "Permission",
+    "HarmonyOS",
+    "Cordova",
+    "Capacitor",
+    "Hybrid",
+    "H5",
+    "Webview",
+  ]
 }

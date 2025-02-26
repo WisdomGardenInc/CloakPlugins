@@ -40,7 +40,8 @@ CloakPluginPermission is one of the plugins of the [Cloak framework](https://git
    ]
   ```
 
-3. Add the permission request description internationalization file in the project entry/src/main/resources/base/element/string.json.
+3. [Optional] Add/override the permission request description internationalization file in the project entry/src/main/resources/base/element/string.json.
+   Cloak has already built-in some permission request description internationalization [files](https://github.com/WisdomGardenInc/Cloak/blob/master/framework/src/main/resources/base/element/string.json).
 
   [Official Documentation](https://developer.huawei.com/consumer/en/doc/harmonyos-guides-V5/resource-categories-and-access-V5)
   

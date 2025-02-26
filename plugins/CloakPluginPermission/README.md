@@ -40,7 +40,8 @@ CloakPluginPermission 是 Cloak 框架的插件之一，用于检查、请求 Ha
   ]
   ```
 
-3. 在项目 entry/src/main/resources/base/element/string.json 中添加权限请求说明国际化文件。
+3. [选做]在项目 entry/src/main/resources/base/element/string.json 中添加/覆盖权限请求说明国际化文件。
+   Cloak 已经内置了部分权限请求说明国际化[文件](https://github.com/WisdomGardenInc/Cloak/blob/master/framework/src/main/resources/base/element/string.json)。
 
   [官方文档](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides-V5/resource-categories-and-access-V5)
   
