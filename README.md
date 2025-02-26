@@ -6,7 +6,8 @@
 
 ## 插件列表
 
-- **[CloakPluginPermission](./plugins/CloakPluginPermission/README.md)**
+- **[CloakPluginPermission](./plugins/CloakPluginPermission/README.md)** `ohpm i @wisdomgarden/cloak-plugin-permission`
+  
   用于检查、请求 HarmonyOS 权限。
 
 

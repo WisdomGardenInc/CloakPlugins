@@ -6,7 +6,8 @@ This project is a collection of Cloak framework plugins developed by the officia
 
 ## Plugin List
 
-- **[CloakPluginPermission](./plugins/CloakPluginPermission/README-EN.md)**
+- **[CloakPluginPermission](./plugins/CloakPluginPermission/README.md)** `ohpm i @wisdomgarden/cloak-plugin-permission`
+  
   Used to check and request HarmonyOS permissions.
 
 More plugins are coming soon, stay tuned.
