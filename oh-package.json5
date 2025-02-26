@@ -1,6 +1,10 @@
 {
   "modelVersion": "5.0.1",
-  "description": "Please describe the basic information.",
+  "description": "A collection of Cloak framework(A Hybrid Development Framework for HarmonyOS) plugins developed by the official WisdomGarden team.",
+  "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins",
+  "homepage": "https://tronclass.com.cn/",
+  "license": "Apache-2.0",
   "dependencies": {
   },
   "devDependencies": {

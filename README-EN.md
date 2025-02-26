@@ -2,7 +2,7 @@
 
 # Cloak Plugins
 
-This project is a collection of Cloak framework plugins developed by the official WisdomGarden team.
+This project is a collection of [Cloak](https://github.com/WisdomGardenInc/Cloak) framework plugins developed by the official [WisdomGarden](https://tronclass.com.cn/) team.
 
 ## Plugin List
 

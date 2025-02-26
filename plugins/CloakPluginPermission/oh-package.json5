@@ -1,10 +1,12 @@
 {
   "name": "@wisdomgarden/cloak-plugin-permission",
   "version": "1.0.0",
-  "description": "Please describe the basic information.",
-  "main": "Index.ets",
+  "description": "A Permission Plugin of Cloak framework(A Hybrid Development Framework for HarmonyOS)",
   "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginPermission",
+  "homepage": "https://tronclass.com.cn/",
   "license": "Apache-2.0",
+  "main": "Index.ets",
   "dependencies": {
     "@wisdomgarden/cloak": "^1.0.1"
   },

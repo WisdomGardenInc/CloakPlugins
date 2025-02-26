@@ -2,7 +2,7 @@
 
 # Cloak Plugins
 
-这个项目是 WisdomGarden 官方团队开发的 Cloak 框架插件集合。
+这个项目是 [WisdomGarden](https://tronclass.com.cn/) 官方团队开发的 [Cloak](https://github.com/WisdomGardenInc/Cloak) 框架插件集合。
 
 ## 插件列表
 
