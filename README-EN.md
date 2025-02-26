@@ -6,7 +6,7 @@ This project is a collection of [Cloak](https://github.com/WisdomGardenInc/Cloak
 
 ## Plugin List
 
-- **[CloakPluginPermission](./plugins/CloakPluginPermission/README.md)** `ohpm i @wisdomgarden/cloak-plugin-permission`
+- **[CloakPluginPermission](./plugins/CloakPluginPermission/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-permission`
   
   Used to check and request HarmonyOS permissions.
 
