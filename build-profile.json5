@@ -1,0 +1,59 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/peixinliu/.ohos/config/default_CloakPlugins_AaL1RVFzbgJIPuYFPHI0dpJlkRoD4gQ8eaGPha1thUw=.cer",
+          "storePassword": "0000001B9FB8C75A87B5ECB7B8E5E3E16F01432097321990046A483BAF8BD999DD5B6D5FA5AC77B42E9590",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B052B8C316F6E005171015B48841F274AA4BF9360C55923AA8705E61BCAEC5537ABDB01854ED162",
+          "profile": "/Users/peixinliu/.ohos/config/default_CloakPlugins_AaL1RVFzbgJIPuYFPHI0dpJlkRoD4gQ8eaGPha1thUw=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/peixinliu/.ohos/config/default_CloakPlugins_AaL1RVFzbgJIPuYFPHI0dpJlkRoD4gQ8eaGPha1thUw=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.1(13)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CloakPluginPermission",
+      "srcPath": "./plugins/CloakPluginPermission",
+    }
+  ]
+}
