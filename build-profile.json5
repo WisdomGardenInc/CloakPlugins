@@ -54,6 +54,10 @@
     {
       "name": "CloakPluginPermission",
       "srcPath": "./plugins/CloakPluginPermission",
+    },
+    {
+      "name": "CloakPluginInAppBrowser",
+      "srcPath": "./plugins/CloakPluginInAppBrowser",
     }
   ]
 }

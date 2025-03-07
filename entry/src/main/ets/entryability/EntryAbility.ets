@@ -3,13 +3,14 @@ import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
 import { Cloak } from '@wisdomgarden/cloak'
 import { CloakPluginPermission } from '@wisdomgarden/cloak-plugin-permission'
+import { CloakPluginInAppBrowser } from '@wisdomgarden/cloak-plugin-inappbrowser'
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
 
-    new Cloak(this.context.getApplicationContext(), [new CloakPluginPermission()]);
+    new Cloak(this.context.getApplicationContext(), [new CloakPluginPermission(), new CloakPluginInAppBrowser()]);
   }
 
   onDestroy(): void {

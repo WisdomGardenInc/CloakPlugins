@@ -254,3 +254,5 @@ dist
 
 /signing
 BuildProfile.ets
+
+cloak.har
