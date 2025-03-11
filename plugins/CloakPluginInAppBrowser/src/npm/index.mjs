@@ -30,6 +30,7 @@ const register = (plugin) => {
       }
     };
 
+    browser.open();
     return browser;
   };
 

@@ -45,7 +45,7 @@ export interface InAppBrowserInstanceRxjs extends InAppBrowserObject {
 
 export interface InAppBrowserPlugin extends Plugin {
   currentBrowser: InAppBrowserObject | null;
-  create(url: string, target?: IOpenTarget, options?: ICreateBrowserOptions): InAppBrowserObject;
+  create(url: string, target?: IOpenTarget, options?: ICreateBrowserOptions): InAppBrowserInstanceRxjs;
   createBrowser(url: string, target?: string, options?: ICreateBrowserOptions): InAppBrowserObject;
 }
 
