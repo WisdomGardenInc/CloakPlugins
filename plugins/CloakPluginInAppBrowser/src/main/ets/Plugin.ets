@@ -1,7 +1,7 @@
 import { InAppWebview, InAppWebviewOptions } from './InAppWebview';
 import { webview } from '@kit.ArkWeb';
 import { ComponentContent, OnPageBeginEvent } from '@kit.ArkUI';
-import { CloakPlugin, PluginMethod } from '@wisdomgarden/cloak';
+import { Cloak, CloakPlugin, PluginMethod } from '@wisdomgarden/cloak';
 import { common, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import {
@@ -33,6 +33,7 @@ export default class InAppBrowser extends CloakPlugin {
     };
 
     try {
+      CloakPlugin.uiContext.getWindowName();
       await (getContext() as common.UIAbilityContext).startAbility(want)
 
       return true;
@@ -52,6 +53,7 @@ export default class InAppBrowser extends CloakPlugin {
       this.openSystemBrowser(url);
       return null;
     }
+
 
     if (this.isOpened) {
       return null;
@@ -75,12 +77,13 @@ export default class InAppBrowser extends CloakPlugin {
       url,
       closeDialog: this.close.bind(this),
       webviewHooks,
-      createBrowserOptions: options
+      createBrowserOptions: options,
+      safeAreaTop: Cloak.SAFE_TOP,
+      safeAreaBottom: Cloak.SAFE_BOTTOM,
     });
 
     this.inappbrowserContent =
       new ComponentContent(CloakPlugin.uiContext, wrapBuilder(InAppWebview), inappbrowserOptions);
-
 
     return new Browser({
       open: this.open.bind(this),
@@ -101,6 +104,7 @@ export default class InAppBrowser extends CloakPlugin {
     if (this.isOpened) {
       return false;
     }
+
     CloakPlugin.uiContext.getPromptAction().openCustomDialog(this.inappbrowserContent, {
       alignment: DialogAlignment.TopStart,
       autoCancel: false,

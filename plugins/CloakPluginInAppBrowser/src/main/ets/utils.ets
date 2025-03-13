@@ -33,15 +33,14 @@ const compatibleOptionsValue = (value?: string | boolean | number | null) => {
   }
 };
 
-
-
-
 export const getBrowserOptions = (clientOptions: ESObject) => {
   const convertedOptions: ICreateBrowserOptions = {};
   for (const key of Object.keys(clientOptions)) {
     const realKey = compatibleOptionsMap.get(key);
     if (realKey) {
       Reflect.set(convertedOptions, realKey, compatibleOptionsValue(Reflect.get(clientOptions, key)))
+    } else {
+      Reflect.set(convertedOptions, key, compatibleOptionsValue(Reflect.get(clientOptions, key)))
     }
   }
 

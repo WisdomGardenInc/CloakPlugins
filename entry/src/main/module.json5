@@ -50,6 +50,7 @@
       }
     ],
     "requestPermissions": [
+      // system grant
       {
         "name": "ohos.permission.INTERNET",
         "reason": "$string:permission_internet_reason",
@@ -57,7 +58,6 @@
           "abilities": [
             "EntryAbility"
           ],
-          "when": "inuse"
         }
       },
       {
@@ -67,9 +67,54 @@
           "abilities": [
             "EntryAbility"
           ],
+        }
+      },
+      {
+        name: "ohos.permission.GET_WIFI_INFO",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
           "when": "inuse"
         }
       },
+      {
+        name: "ohos.permission.GET_BUNDLE_INFO",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        name: "ohos.permission.VIBRATE",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        name: "ohos.permission.MODIFY_AUDIO_SETTINGS",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      {
+        name: "ohos.permission.STORE_PERSISTENT_DATA",
+        "usedScene": {
+          "abilities": [
+            "EntryAbility"
+          ],
+          "when": "inuse"
+        }
+      },
+      // user grant
       {
         "name": "ohos.permission.LOCATION",
         "reason": "$string:permission_location_reason",

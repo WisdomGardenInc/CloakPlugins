@@ -255,4 +255,8 @@ dist
 /signing
 BuildProfile.ets
 
-cloak.har
+framework.har
+
+**/src/npm/LICENSE
+**/src/npm/README.md
+**/src/npm/README-EN.md

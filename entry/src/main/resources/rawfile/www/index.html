@@ -82,7 +82,9 @@
       word-break: break-word;
     }
   </style>
-
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@wisdomgarden/cloak-plugin-inappbrowser@latest/index.mjs"></script> -->
+  <script type="module" src="https://mobile-download.tronclass.com.cn/cdn/cloak-plugin-inappbrowser.mjs"></script>
+  <!-- <script type="module" src="/js/cloak-plugin-inappbrowser.mjs"></script> -->
   <script language="javascript">
     window.document.addEventListener(
       "CloakReady",
@@ -142,6 +144,12 @@
       const result = await Cloak.plugins.Permission.request(permissions)
       alert(JSON.stringify(result, null, 2));
     }
+
+    const onOpenUrl = async (url) => {
+      const browser = Cloak.plugins.InAppBrowser.create(url, "_blank", { clearcache: true });
+
+      browser.open();
+    };
   </script>
 </head>
 
@@ -153,13 +161,17 @@
       <div id="pluginsInfo"></div>
     </section>
     <section>
-      <h2>Operations</h2>
+      <h2>Permission Operations</h2>
       <button
         onclick="queryPermissions(['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATELY_LOCATION', 'ohos.permission.CAMERA','ohos.permission.MICROPHONE'])">Query
         Permissions</button>
       <button
         onclick="requestPermissions(['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATELY_LOCATION', 'ohos.permission.CAMERA','ohos.permission.MICROPHONE'])">Request
         Permissions</button>
+    </section>
+    <section>
+      <h2>InAppBrowser Operations</h2>
+      <button onclick="onOpenUrl('https://www.openharmony.cn/')">InAppBrowser.open</button>
     </section>
     <section>
       <h2>Framework Information</h2>
