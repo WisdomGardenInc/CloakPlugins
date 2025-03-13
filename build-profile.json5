@@ -58,6 +58,10 @@
     {
       "name": "CloakPluginInAppBrowser",
       "srcPath": "./plugins/CloakPluginInAppBrowser",
+    },
+    {
+      "name": "CloakPluginHttp",
+      "srcPath": "./plugins/CloakPluginHttp"
     }
   ]
 }

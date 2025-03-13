@@ -1,0 +1,25 @@
+{
+  "name": "@wisdomgarden/cloak-plugin-http",
+  "version": "1.0.0",
+  "description": "placeholder",
+  "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginHttp",
+  "homepage": "https://tronclass.com.cn/",
+  "license": "Apache-2.0",
+  "main": "Index.ets",
+  "dependencies": {
+    "@wisdomgarden/cloak": "1.0.4"
+  },
+  "keywords": [
+    "Cloak",
+    "CloakPlugin",
+    "HarmonyOS",
+    "Cordova",
+    "Capacitor",
+    "Hybrid",
+    "H5",
+    "Webview",
+    "native-http",
+    "advanced-http"
+  ]
+}

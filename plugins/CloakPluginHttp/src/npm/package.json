@@ -1,0 +1,27 @@
+{
+  "name": "@wisdomgarden/cloak-plugin-permission",
+  "version": "0.0.1",
+  "description": "placeholder",
+  "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginHttp",
+  "homepage": "https://tronclass.com.cn/",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "scripts": {
+    "prepack": "cp ../../README.md . && cp ../../LICENSE . && cp ../../README-EN.md ."
+  },
+  "keywords": [
+    "Cloak",
+    "CloakPlugin",
+    "HarmonyOS",
+    "Cordova",
+    "Capacitor",
+    "Hybrid",
+    "H5",
+    "Webview",
+    "native-http",
+    "advanced-http"
+  ]
+}
