@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Open an in-app browser window for Cloak Framework",
   "author": "WisdomGarden",
-  "repository": "https://github.com/WisdomGardenInc/Cloak",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginInAppBrowser",
   "homepage": "https://tronclass.com.cn/",
   "license": "Apache-2.0",
   "main": "index.js",

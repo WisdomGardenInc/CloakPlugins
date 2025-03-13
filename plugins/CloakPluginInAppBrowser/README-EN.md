@@ -49,8 +49,6 @@ CloakPluginInAppBrowser is a plugin for the Cloak framework, designed to open an
 const onOpenUrl = async (url) => {
   const browser = Cloak.plugins.InAppBrowser.create(url, "_blank", { clearcache: true, footer: false });
 
-  browser.open();
-
   // Listen for loadstart event
   browser.addEventListener('loadstart', function (event) {
     alert("addEventListener loadstart: " + event.url);

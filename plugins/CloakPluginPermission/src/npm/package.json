@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A Permission Plugin of Cloak framework(A Hybrid Development Framework for HarmonyOS)",
   "author": "WisdomGarden",
-  "repository": "https://github.com/WisdomGardenInc/Cloak",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginPermission",
   "homepage": "https://tronclass.com.cn/",
   "license": "Apache-2.0",
   "main": "index.js",

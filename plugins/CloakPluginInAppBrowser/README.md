@@ -50,8 +50,6 @@ CloakPluginInAppBrowser 是 Cloak 框架的插件之一，用于在 Cloak 应用
 const onOpenUrl = async (url) => {
   const browser = Cloak.plugins.InAppBrowser.create(url, "_blank", { clearcache: true, footer: false });
 
-  browser.open();
-
   // 监听 loadstart 事件
   browser.addEventListener('loadstart', function (event) {
     alert("addEventListener loadstart: " + event.url);
