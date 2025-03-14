@@ -1,6 +1,6 @@
 {
   "name": "@wisdomgarden/cloak-plugin-inappbrowser",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Open an in-app browser window for Cloak Framework",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginInAppBrowser",
