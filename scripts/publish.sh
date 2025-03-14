@@ -18,6 +18,7 @@ for dir in plugins/*/build/default/outputs/default; do
 
     if [[ -n "$selected_file" ]]; then
         echo "Publishing $selected_file"
+        cp $selected_file local_hars/
         ohpm publish "$selected_file"
     else
         echo "No matching .har file found for $subdir"
