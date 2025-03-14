@@ -14,11 +14,12 @@ import {
   IWebviewHooks
 } from './types';
 import { getBrowserOptions } from './utils';
+import BuildProfile from '../../../BuildProfile';
 
 
 export default class InAppBrowser extends CloakPlugin {
   protected _name = "InAppBrowser";
-  protected _version = "1.0.0";
+  protected _version = BuildProfile.HAR_VERSION;
   protected _description = ''
   private isOpened = false;
   private isShowing = false;

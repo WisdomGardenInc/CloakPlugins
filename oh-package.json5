@@ -12,6 +12,6 @@
     "@ohos/hamock": "1.0.0"
   },
   "overrides": {
-    "@wisdomgarden/cloak": "file:./framework.har"
+    "@wisdomgarden/cloak": "1.0.4"
   }
 }

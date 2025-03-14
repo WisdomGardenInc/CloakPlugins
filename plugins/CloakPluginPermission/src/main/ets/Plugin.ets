@@ -1,10 +1,11 @@
 import { PluginMethod, CloakPlugin } from '@wisdomgarden/cloak';
 import { abilityAccessCtrl, bundleManager, common, Permissions } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import BuildProfile from '../../../BuildProfile';
 
 export default class Permission extends CloakPlugin {
   protected _name = "Permission";
-  protected _version = "1.0.0";
+  protected _version = BuildProfile.HAR_VERSION;
 
   private unifyPermissions(permissions: Permissions | Permissions[]): Permissions[] {
     if (typeof permissions === "string") {

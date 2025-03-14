@@ -1,6 +1,7 @@
 import { CloakPlugin, PluginMethod } from '@wisdomgarden/cloak';
 import { http } from '@kit.NetworkKit';
 import { BusinessError } from '@ohos.base';
+import BuildProfile from '../../../BuildProfile';
 
 
 interface IRequestOptions {
@@ -38,7 +39,7 @@ const try2Json = (text: ESObject): ESObject => {
 
 export default class Http extends CloakPlugin {
   protected _name = "Http";
-  protected _version = "1.0.0";
+  protected _version = BuildProfile.HAR_VERSION;
 
   @PluginMethod()
   async sendRequest(url: string, options?: IRequestOptions) {

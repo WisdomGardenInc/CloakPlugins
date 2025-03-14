@@ -1,6 +1,6 @@
 {
   "name": "@wisdomgarden/cloak-plugin-permission",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Permission Plugin of Cloak framework(A Hybrid Development Framework for HarmonyOS)",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginPermission",
