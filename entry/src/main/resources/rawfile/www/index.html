@@ -7,150 +7,12 @@
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Cloak Plugins</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
 
-    html,
-    body {
-      width: 100vw;
-      color: black;
-      font-size: 16px;
-    }
-
-    body {
-      height: 100vh;
-      scroll: auto;
-      padding: 1rem;
-      box-sizing: border-box;
-    }
-
-    section {
-      margin: 1.5rem 0;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      scroll: auto;
-    }
-
-    h2 {
-      margin-bottom: 1rem;
-    }
-
-    button {
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .code-area {
-      margin: 1rem 0;
-      white-space: break-spaces;
-      word-break: break-word;
-      line-break: auto;
-      overflow: scroll;
-    }
-
-    .plugin-item {
-      margin: 1rem 0;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-    }
-
-    .plugin-item h3 {
-      margin-bottom: 0.5rem;
-      color: #2196F3;
-      font-family: 'monospace';
-    }
-
-    .plugin-item p {
-      margin: 0.5rem 0;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      word-break: break-word;
-    }
-  </style>
+  <link rel="stylesheet" href="./index.css" />
   <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@wisdomgarden/cloak-plugin-inappbrowser@latest/index.mjs"></script> -->
   <script type="module" src="https://mobile-download.tronclass.com.cn/cdn/cloak-plugin-inappbrowser.mjs"></script>
   <!-- <script type="module" src="/js/cloak-plugin-inappbrowser.mjs"></script> -->
-  <script language="javascript">
-    window.document.addEventListener(
-      "CloakReady",
-      () => {
-        showUserAgent();
-        displayFrameworkInfo();
-        displayPluginsInfo();
-      },
-      { once: true }
-    );
-
-    const showUserAgent = () => {
-      document.getElementById("userAgent").innerText = window.location.href + "\n" + window.navigator.userAgent;
-    };
-
-    const displayFrameworkInfo = () => {
-      const pluginsInfoDiv = document.getElementById("frameworkInfo");
-      if (!window.Cloak) {
-        return;
-      }
-      pluginsInfoDiv.innerHTML = JSON.stringify(Cloak.metadata, null, 2);
-    };
-
-    const displayPluginsInfo = () => {
-      const pluginsInfoDiv = document.getElementById("pluginsInfo");
-      pluginsInfoDiv.innerHTML = "";
-
-      if (window.Cloak && window.Cloak.plugins) {
-        const plugins = window.Cloak.plugins;
-        for (const pluginName in plugins) {
-          if (plugins.hasOwnProperty(pluginName)) {
-            const plugin = plugins[pluginName];
-            const metadata = plugin.getMetadata();
-            const pluginInfo = document.createElement("div");
-            pluginInfo.className = "plugin-item";
-            pluginInfo.innerHTML = `
-                    <h3>📦 ${metadata.name}</h3>
-                    <p>Version: ${metadata.version}</p>
-                    <p>Methods: ${metadata.methods.join(", ")}</p>
-                    <p>${metadata.description}</p>
-                `;
-            pluginsInfoDiv.appendChild(pluginInfo);
-          }
-        }
-      } else {
-        pluginsInfoDiv.textContent = "No plugins installed.";
-      }
-    };
-
-    // permission
-    const queryPermissions = async (permissions) => {
-      const result = await Cloak.plugins.Permission.query(permissions)
-      alert(JSON.stringify(result, null, 2));
-    }
-
-    const requestPermissions = async (permissions) => {
-      const result = await Cloak.plugins.Permission.request(permissions)
-      alert(JSON.stringify(result, null, 2));
-    }
-
-    const onOpenUrl = async (url) => {
-      const browser = Cloak.plugins.InAppBrowser.create(url, "_blank", { clearcache: true });
-
-      browser.open();
-    };
-  </script>
+  <script src="./index.js"></script>
 </head>
 
 <body>
@@ -161,7 +23,7 @@
       <div id="pluginsInfo"></div>
     </section>
     <section>
-      <h2>Permission Operations</h2>
+      <h2>Permission</h2>
       <button
         onclick="queryPermissions(['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATELY_LOCATION', 'ohos.permission.CAMERA','ohos.permission.MICROPHONE'])">Query
         Permissions</button>
@@ -170,8 +32,13 @@
         Permissions</button>
     </section>
     <section>
-      <h2>InAppBrowser Operations</h2>
+      <h2>InAppBrowser</h2>
       <button onclick="onOpenUrl('https://www.openharmony.cn/')">InAppBrowser.open</button>
+    </section>
+    <section>
+      <h2>Http</h2>
+      <button onclick="httpGet()">GET</button>
+      <button onclick="httpPost()">POST</button>
     </section>
     <section>
       <h2>Framework Information</h2>

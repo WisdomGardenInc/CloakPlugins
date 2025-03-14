@@ -1,4 +1,4 @@
-import CloakPluginPermission from './src/main/ets/Plugin'
+import CloakPluginHttp from './src/main/ets/Plugin'
 
 
-export { CloakPluginPermission }
+export { CloakPluginHttp }
