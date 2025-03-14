@@ -2,5 +2,5 @@
 
 # Changelog
 
-## 1.0.0 (2025-02-26)
-- Implemented interfaces `query` and `request`
+## 1.0.0 (2025-03-13)
+- Implemented basic HTTP request functionality

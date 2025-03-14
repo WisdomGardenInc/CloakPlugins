@@ -10,6 +10,14 @@ This project is a collection of [Cloak](https://github.com/WisdomGardenInc/Cloak
   
   Used to check and request HarmonyOS permissions.
 
+- **[CloakPluginHttp](./plugins/CloakPluginHttp/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-http`
+  
+  Used to make Native HTTP requests within Cloak applications.
+
+- **[CloakPluginInAppBrowser](./plugins/CloakPluginInAppBrowser/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-inappbrowser`
+  
+  Used to open internal browsers in Cloak applications and perform operations.
+
 More plugins are coming soon, stay tuned.
 
 ---

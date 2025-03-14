@@ -2,7 +2,7 @@
 
 # CloakPluginInAppBrowser
 
-CloakPluginInAppBrowser 是 Cloak 框架的插件之一，用于在 Cloak 应用 中再打开浏览器，执行操作。
+CloakPluginInAppBrowser 是 Cloak 框架的插件之一，用于在 Cloak 应用中打再开内部浏览器，执行操作。
 
 ## 使用方法
 

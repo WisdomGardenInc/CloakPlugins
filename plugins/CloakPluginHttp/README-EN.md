@@ -2,7 +2,7 @@
 
 # CloakPluginHttp
 
-CloakPluginHttp is a plugin for the Cloak framework, used for making HTTP requests within Cloak applications.
+CloakPluginHttp is a plugin for the Cloak framework, used for making native HTTP requests within Cloak applications.
 
 ## Usage
 

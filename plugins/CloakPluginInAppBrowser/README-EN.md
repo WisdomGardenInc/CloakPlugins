@@ -2,7 +2,7 @@
 
 # CloakPluginInAppBrowser
 
-CloakPluginInAppBrowser is a plugin for the Cloak framework, designed to open and manage browser windows within Cloak applications.
+CloakPluginInAppBrowser is a plugin for the Cloak framework, designed to open and manage internal browser window within Cloak applications.
 
 ## Usage
 

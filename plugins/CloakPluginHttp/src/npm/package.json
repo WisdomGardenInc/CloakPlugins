@@ -1,7 +1,7 @@
 {
   "name": "@wisdomgarden/cloak-plugin-permission",
   "version": "0.0.1",
-  "description": "placeholder",
+  "description": "Making native HTTP requests within Cloak applications.",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginHttp",
   "homepage": "https://tronclass.com.cn/",
@@ -10,7 +10,7 @@
   "module": "index.js",
   "type": "module",
   "scripts": {
-    "prepack": "cp ../../README.md . && cp ../../LICENSE . && cp ../../README-EN.md ."
+    "prepack": "cp ../../README*.md . && cp ../../LICENSE ."
   },
   "keywords": [
     "Cloak",

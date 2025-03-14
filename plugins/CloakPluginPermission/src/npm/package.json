@@ -10,7 +10,7 @@
   "module": "index.js",
   "type": "module",
   "scripts": {
-    "prepack": "cp ../../README.md . && cp ../../LICENSE . && cp ../../README-EN.md ."
+    "prepack": "cp ../../README*.md . && cp ../../LICENSE ."
   },
   "keywords": [
     "Cloak",
