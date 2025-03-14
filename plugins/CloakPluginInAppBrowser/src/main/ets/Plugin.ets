@@ -24,6 +24,7 @@ export default class InAppBrowser extends CloakPlugin {
   private isShowing = false;
   private inappbrowserContent?: ComponentContent<Object>;
   private inAppWebviewController?: webview.WebviewController;
+  private inappbrowserOptions?:InAppWebviewOptions
 
   private async openSystemBrowser(url: string) {
     let want: Want = {
@@ -72,7 +73,7 @@ export default class InAppBrowser extends CloakPlugin {
       onPageEnd: this.onPageEnd.bind(this),
     }
 
-    const inappbrowserOptions = new InAppWebviewOptions({
+    this.inappbrowserOptions = new InAppWebviewOptions({
       webviewController: this.inAppWebviewController,
       url,
       closeDialog: this.close.bind(this),
@@ -83,7 +84,7 @@ export default class InAppBrowser extends CloakPlugin {
     });
 
     this.inappbrowserContent =
-      new ComponentContent(CloakPlugin.uiContext, wrapBuilder(InAppWebview), inappbrowserOptions);
+      new ComponentContent(CloakPlugin.uiContext, wrapBuilder(InAppWebview), this.inappbrowserOptions);
 
     return new Browser({
       open: this.open.bind(this),
@@ -138,6 +139,7 @@ export default class InAppBrowser extends CloakPlugin {
     CloakPlugin.uiContext.getPromptAction().closeCustomDialog(this.inappbrowserContent)
     this.inappbrowserContent.dispose();
     this.inappbrowserContent = undefined;
+    this.inappbrowserOptions = undefined;
     return true;
   }
 
@@ -233,6 +235,7 @@ export default class InAppBrowser extends CloakPlugin {
   }
 
   private onPageBegin(event: OnPageBeginEvent) {
+    this.inappbrowserContent?.update(this.inappbrowserOptions)
     this.sendBrowserEventAndMessage('loadstart', event.url)
   }
 

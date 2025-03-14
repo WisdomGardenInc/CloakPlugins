@@ -14,6 +14,8 @@ interface InAppWebviewOptionsData {
 
 
 export class InAppWebviewOptions {
+  accessForward: boolean = false
+  accessBackward: boolean = false
   private _webviewController: webview.WebviewController;
   private _url: string;
   private _closeDialog: Function;
@@ -98,7 +100,12 @@ export function InAppWebview(options: InAppWebviewOptions) {
       .onPermissionRequest(event => {
         event?.request.grant(event.request.getAccessibleResource());
       })
-      .onPageBegin(options.webviewHooks.onPageBegin)
+      .onPageBegin((event) => {
+        // ugly implementation
+        options.accessForward = options.webviewController.accessForward()
+        options.accessBackward = options.webviewController.accessBackward()
+        options.webviewHooks.onPageBegin(event);
+      })
       .onPageEnd(options.webviewHooks.onPageEnd)
       .onControllerAttached(() => {
         //
@@ -140,7 +147,7 @@ export function InAppWebview(options: InAppWebviewOptions) {
             Button() {
               Image($r('app.media.back')).fillColor(Color.White).width(20).height(20)
             }
-            // .opacity(options.webviewAttached ?? options.webviewController.accessBackward() ? 1 : 0.5)
+            .opacity(options.accessBackward ? 1 : 0.5)
             .backgroundColor(Color.Transparent)
             .padding({ left: 15, right: 15 })
             .onClick(() => {
@@ -152,7 +159,7 @@ export function InAppWebview(options: InAppWebviewOptions) {
             Button() {
               Image($r('app.media.forward')).fillColor(Color.White).width(20).height(20)
             }
-            // .opacity(options.webviewAttached && options.webviewController.accessForward() ? 1 : 0.5)
+            .opacity(options.accessForward ? 1 : 0.5)
             .backgroundColor(Color.Transparent)
             .onClick(() => {
               if (options.webviewController.accessForward()) {
