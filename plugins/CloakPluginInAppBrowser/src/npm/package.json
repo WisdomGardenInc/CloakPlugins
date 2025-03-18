@@ -1,13 +1,13 @@
 {
   "name": "@wisdomgarden/cloak-plugin-inappbrowser",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Open an in-app browser window for Cloak Framework",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginInAppBrowser",
   "homepage": "https://tronclass.com.cn/",
   "license": "Apache-2.0",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "index.mjs",
+  "module": "index.mjs",
   "type": "module",
   "scripts": {
     "prepack": "cp ../../README*.md . && cp ../../LICENSE ."

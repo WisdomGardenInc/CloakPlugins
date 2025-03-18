@@ -21,6 +21,9 @@ export interface HttpPlugin extends Plugin {
   sendRequest(url: string, options?: RequestOptions): Promise<HTTPResponse>;
 }
 
+export const register: () => void;
+export const Http: HttpPlugin;
+
 declare module "@wisdomgarden/cloak" {
   export interface CloakPlugins {
     Http: HttpPlugin;

@@ -15,6 +15,9 @@ export interface PermissionPlugin extends Plugin {
 
 export { GrantStatus, Permissions };
 
+export const register: () => void;
+export const Permission: PermissionPlugin;
+
 declare module "@wisdomgarden/cloak" {
   export interface CloakPlugins {
     Permission: PermissionPlugin;

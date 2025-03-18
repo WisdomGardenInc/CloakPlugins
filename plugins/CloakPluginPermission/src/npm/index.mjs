@@ -1,4 +1,5 @@
-let Permission;
+let PluginInstance = null;
+const PluginName = "Permission";
 
 const OHOS_USER_GRANT_PERMISSION = [
   "ohos.permission.ACCESS_BLUETOOTH",
@@ -26,10 +27,14 @@ const compatiblePermissionType = (permission) => {
   if (!permission) {
     return permission;
   }
-  if (OHOS_USER_GRANT_PERMISSION.includes(permission)) {
-    return permission;
+  if (!Array.isArray(permission)) {
+    if (OHOS_USER_GRANT_PERMISSION.includes(permission)) {
+      return permission;
+    } else {
+      return;
+    }
   } else {
-    return;
+    return permission;
   }
 };
 
@@ -48,6 +53,9 @@ const register = (plugin) => {
     return;
   }
 
+  PluginInstance = plugin;
+  plugin.registered = true;
+
   plugin.queryLikeCapacitor = async ({ name }) => {
     let permission = compatiblePermissionType(name);
     if (!permission) {
@@ -55,7 +63,7 @@ const register = (plugin) => {
     }
     const results = await plugin.query(permission);
 
-    return Object.values(results).every(s => s === 0) ? { state: "granted" } : { state: "denied" };
+    return Object.values(results).every((s) => s === 0) ? { state: "granted" } : { state: "denied" };
   };
 
   plugin.requestLikeCapacitor = async ({ name }) => {
@@ -65,19 +73,16 @@ const register = (plugin) => {
     }
     const results = await plugin.request(permission);
 
-    return Object.values(results).every(s => s === 0) ? { state: "granted" } : { state: "denied" };
+    return Object.values(results).every((s) => s === 0) ? { state: "granted" } : { state: "denied" };
   };
-
-  Permission = plugin;
-  plugin.registered = true;
 };
 
 (() => {
   window.__CloakPluginsRegister = window.__CloakPluginsRegister || {};
-  window.__CloakPluginsRegister["Permission"] = register;
-  if (Cloak && Cloak.plugins && Cloak.plugins.Permission) {
-    register(Cloak.plugins.Permission);
+  window.__CloakPluginsRegister[PluginName] = register;
+  if (Cloak && Cloak.plugins && Cloak.plugins[PluginName]) {
+    register(Cloak.plugins[PluginName]);
   }
 })();
 
-export { register, Permission };
+export { register, PluginInstance as Permission };

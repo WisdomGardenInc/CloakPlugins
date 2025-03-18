@@ -1,10 +1,12 @@
-let InAppBrowser = null;
-
+let PluginInstance = null;
+const PluginName = 'InAppBrowser'
 const register = (plugin) => {
   if (plugin.registered) {
     return;
   }
-  InAppBrowser = plugin;
+  PluginInstance = plugin;
+  plugin.registered = true;
+
   plugin.currentBrowser = null;
   plugin.create = function (url, target, options) {
     const browser = plugin.createBrowser(url, target, options);
@@ -46,19 +48,17 @@ const register = (plugin) => {
   };
 
   plugin.setMessageHandler(messagehandler);
-
-  plugin.registered = true;
 };
 
 (() => {
   window.__CloakPluginsRegister = window.__CloakPluginsRegister || {};
-  window.__CloakPluginsRegister["InAppBrowser"] = register;
-  if (Cloak && Cloak.plugins && Cloak.plugins.InAppBrowser) {
-    register(Cloak.plugins.InAppBrowser);
+  window.__CloakPluginsRegister[PluginName] = register;
+  if (Cloak && Cloak.plugins && Cloak.plugins[PluginName]) {
+    register(Cloak.plugins[PluginName]);
   }
 })();
 
 export {
   register,
-  InAppBrowser,
+  PluginInstance as InAppBrowser,
 };

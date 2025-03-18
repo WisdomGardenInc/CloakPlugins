@@ -1,13 +1,13 @@
 {
   "name": "@wisdomgarden/cloak-plugin-http",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Making native HTTP requests within Cloak applications.",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginHttp",
   "homepage": "https://tronclass.com.cn/",
   "license": "Apache-2.0",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "index.mjs",
+  "module": "index.mjs",
   "type": "module",
   "scripts": {
     "prepack": "cp ../../README*.md . && cp ../../LICENSE ."
