@@ -35,7 +35,6 @@ export default class InAppBrowser extends CloakPlugin {
     };
 
     try {
-      CloakPlugin.uiContext.getWindowName();
       await (getContext() as common.UIAbilityContext).startAbility(want)
 
       return true;

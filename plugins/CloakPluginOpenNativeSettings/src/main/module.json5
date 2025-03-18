@@ -1,0 +1,12 @@
+{
+  "module": {
+    "name": "CloakPluginOpenNativeSettings",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1",
+      "car"
+    ]
+  }
+}

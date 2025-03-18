@@ -257,8 +257,8 @@ BuildProfile.ets
 
 framework.har
 
-**/src/npm/LICENSE
-**/src/npm/README.md
-**/src/npm/README-EN.md
+/plugins/*/src/npm/LICENSE
+/plugins/*/src/npm/README.md
+/plugins/*/src/npm/README-EN.md
 
 /local_hars

@@ -62,6 +62,10 @@
     {
       "name": "CloakPluginHttp",
       "srcPath": "./plugins/CloakPluginHttp"
+    },
+    {
+      "name": "CloakPluginOpenNativeSettings",
+      "srcPath": "./plugins/CloakPluginOpenNativeSettings",
     }
   ]
 }

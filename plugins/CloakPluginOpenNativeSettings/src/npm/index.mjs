@@ -1,5 +1,5 @@
 let PluginInstance = null;
-const PluginName = 'Http'
+const PluginName = 'NativeSettings'
 const register = (plugin) => {
   if (plugin.registered) {
     return;
@@ -18,5 +18,5 @@ const register = (plugin) => {
 
 export {
   register,
-  PluginInstance as Http
+  PluginInstance as NativeSettings
 };

@@ -5,13 +5,16 @@ import { Cloak } from '@wisdomgarden/cloak'
 import { CloakPluginPermission } from '@wisdomgarden/cloak-plugin-permission'
 import { CloakPluginInAppBrowser } from '@wisdomgarden/cloak-plugin-inappbrowser'
 import { CloakPluginHttp } from '@wisdomgarden/cloak-plugin-http'
+import { CloakPluginOpenNativeSettings } from '@wisdomgarden/cloak-plugin-open-native-settings'
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
     this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
 
-    new Cloak(this.context.getApplicationContext(), [new CloakPluginPermission(), new CloakPluginInAppBrowser(), new CloakPluginHttp()]);
+    new Cloak(this.context.getApplicationContext(),
+      [new CloakPluginPermission(), new CloakPluginInAppBrowser(), new CloakPluginHttp(),
+        new CloakPluginOpenNativeSettings()]);
   }
 
   onDestroy(): void {

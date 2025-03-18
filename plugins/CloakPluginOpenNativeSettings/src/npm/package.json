@@ -1,0 +1,27 @@
+{
+  "name": "@wisdomgarden/cloak-plugin-open-native-settings",
+  "version": "0.0.1",
+  "description": "A plugin for the Cloak framework that allows opening system settings within a Cloak-based app.",
+  "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginOpenNativeSettings",
+  "homepage": "https://tronclass.com.cn/",
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "scripts": {
+    "prepack": "cp ../../README*.md . && cp ../../LICENSE ."
+  },
+  "keywords": [
+    "Cloak",
+    "CloakPlugin",
+    "HarmonyOS",
+    "Cordova",
+    "Capacitor",
+    "Hybrid",
+    "H5",
+    "Webview",
+    "open-native-settings",
+    "setting"
+  ]
+}
