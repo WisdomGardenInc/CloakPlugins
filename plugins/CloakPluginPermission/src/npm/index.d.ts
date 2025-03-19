@@ -1,14 +1,16 @@
 import { Plugin, Cloak, ESObject, CloakPlugins } from "@wisdomgarden/cloak";
-import { GrantStatus } from "./@ohos.abilityAccessCtrl";
+import { GrantStatus, SwitchType } from "./@ohos.abilityAccessCtrl";
 import { Permissions } from "./permissions";
 
 interface CapacitorPermissionResult {
   state: "granted" | "denied" | "prompt" | "unavailable";
 }
 
+
 export interface PermissionPlugin extends Plugin {
-  query: (permissions: Permissions | Permissions[]) => Promise<Record<Permissions, GrantStatus>>;
-  request: (permissions: Permissions | Permissions[]) => Promise<Record<Permissions, GrantStatus>>;
+  query: (permissions: Permissions | Permissions[]) => Promise<Record<Permissions, [GrantStatus, boolean]>>;
+  request: (permissions: Permissions | Permissions[]) => Promise<Record<Permissions, [GrantStatus, boolean]>>;
+  requestGlobalSwitch: (type: SwitchType) => Promise<boolean>;
   queryLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
   requestLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
 }

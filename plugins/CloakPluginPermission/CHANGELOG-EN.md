@@ -7,3 +7,6 @@
 
 ## 1.0.1 (2025-03-14)
 - update Cloak framework dependencies to 1.0.4
+
+## 1.0.2 (2025-03-19)
+- add requestGlobalSwitch method

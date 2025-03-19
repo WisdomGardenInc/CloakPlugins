@@ -89,6 +89,9 @@ CloakPluginPermission 是 Cloak 框架的插件之一，用于检查、请求 Ha
    //    PERMISSION_DENIED = -1,
    //    PERMISSION_GRANTED = 0
    // }
+   
+   const result = await Cloak.plugins.Permission.requestGlobalSwitch(2)
+   // return true
    ```
 
 ---

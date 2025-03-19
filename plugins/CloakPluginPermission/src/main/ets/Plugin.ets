@@ -84,4 +84,20 @@ export default class Permission extends CloakPlugin {
 
     return result;
   }
+
+  @PluginMethod()
+  async requestGlobalSwitch(type: abilityAccessCtrl.SwitchType): Promise<boolean> {
+    const atManager: abilityAccessCtrl.AtManager = abilityAccessCtrl.createAtManager();
+    const context: Context = getContext(this) as common.UIAbilityContext;
+    let result = false;
+    try {
+      result = await atManager.requestGlobalSwitch(context, type)
+    } catch (err) {
+      if ((err as BusinessError).code === 12100013) {
+        result = true;
+      }
+      console.error('data:' + JSON.stringify(err));
+    }
+    return result;
+  }
 }

@@ -49,6 +49,7 @@ const displayPluginsInfo = () => {
 // permission
 const queryPermissions = async (permissions) => {
   const result = await Cloak.plugins.Permission.query(permissions);
+  // const result = await Cloak.plugins.Permission.requestGlobalSwitch(2);
   alert(JSON.stringify(result, null, 2));
 };
 

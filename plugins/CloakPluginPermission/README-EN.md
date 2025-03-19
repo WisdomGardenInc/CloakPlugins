@@ -91,6 +91,9 @@ CloakPluginPermission is one of the plugins of the [Cloak framework](https://git
     //    PERMISSION_DENIED = -1,
     //    PERMISSION_GRANTED = 0
     // }
+   
+   const result = await Cloak.plugins.Permission.requestGlobalSwitch(2)
+   // return true
     ```
 
 ---

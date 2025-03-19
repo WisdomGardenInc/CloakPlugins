@@ -44,3 +44,30 @@ export enum GrantStatus {
      */
     PERMISSION_GRANTED = 0
 }
+
+export enum SwitchType {
+    /**
+     * switch of camera
+     *
+     * @syscap SystemCapability.Security.AccessToken
+     * @atomicservice
+     * @since 12
+     */
+    CAMERA = 0,
+    /**
+     * switch of microphone
+     *
+     * @syscap SystemCapability.Security.AccessToken
+     * @atomicservice
+     * @since 12
+     */
+    MICROPHONE = 1,
+    /**
+     * switch of location
+     *
+     * @syscap SystemCapability.Security.AccessToken
+     * @atomicservice
+     * @since 12
+     */
+    LOCATION = 2
+}
