@@ -4,25 +4,47 @@
 
 This project is a collection of [Cloak](https://github.com/WisdomGardenInc/Cloak) framework plugins developed by the official [WisdomGarden](https://tronclass.com.cn/) team.
 
+Each plugin also has a corresponding `npm` package with the same name, making it convenient for `TypeScript` and frontend **extensions**.
+
 ## Plugin List
 
-- **[CloakPluginPermission](./plugins/CloakPluginPermission/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-permission`
+- **[CloakPluginPermission](./plugins/CloakPluginPermission/README-EN.md)**
   
   Used to check and request HarmonyOS permissions.
 
-- **[CloakPluginHttp](./plugins/CloakPluginHttp/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-http`
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-permission
+  npm i @wisdomgarden/cloak-plugin-permission # optional
+  ```
+
+- **[CloakPluginHttp](./plugins/CloakPluginHttp/README-EN.md)**
   
   Used to make Native HTTP requests within Cloak applications.
 
-- **[CloakPluginInAppBrowser](./plugins/CloakPluginInAppBrowser/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-inappbrowser`
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-http
+  npm i @wisdomgarden/cloak-plugin-http # optional
+  ```
+
+- **[CloakPluginInAppBrowser](./plugins/CloakPluginInAppBrowser/README-EN.md)**
   
   Used to open internal browsers in Cloak applications and perform operations.
 
-- **[CloakPluginOpenNativeSettings](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginOpenNativeSettings/README-EN.md)** `ohpm i @wisdomgarden/cloak-plugin-open-native-settings`
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-inappbrowser
+  npm i @wisdomgarden/cloak-plugin-inappbrowser # optional
+  ```
+
+- **[CloakPluginOpenNativeSettings](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginOpenNativeSettings/README-EN.md)**
 
   used for opening native settings pages within Cloak applications
 
-More plugins are coming soon, stay tuned.
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-open-native-settings
+  npm i @wisdomgarden/cloak-plugin-open-native-settings # optional
+  ```
+
+***✨✨✨ More plugins are coming soon, stay tuned. ✨✨✨***
 
 ---
 

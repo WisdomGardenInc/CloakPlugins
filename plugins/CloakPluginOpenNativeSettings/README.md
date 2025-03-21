@@ -15,9 +15,16 @@ CloakPluginOpenNativeSettings 是 Cloak 框架的插件之一，用于在 Cloak 
 1. 安装 CloakPluginOpenNativeSettings 插件
    ```bash
    ohpm install @wisdomgarden/cloak-plugin-open-native-settings
+   npm install @wisdomgarden/cloak-plugin-open-native-settings # optional
    ```
 
 2. 在 H5 逻辑代码中就可以直接调用该插件
+
+3. 如果你使用 Typescript 或者想在前端扩展插件，安装 NPM 包
+   
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-open-native-settings
+   ```
 
 ### 示例代码
 

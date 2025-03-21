@@ -16,6 +16,7 @@ CloakPluginPermission 是 Cloak 框架的插件之一，用于检查、请求 Ha
 1. 安装 CloakPluginPermission 插件
    ```bash
    ohpm install @wisdomgarden/cloak-plugin-permission
+   npm install @wisdomgarden/cloak-plugin-permission # optional
    ```
 2. 在项目 `entry/src/main/module.json5` 中声明所需权限。
 
@@ -92,6 +93,19 @@ CloakPluginPermission 是 Cloak 框架的插件之一，用于检查、请求 Ha
    
    const result = await Cloak.plugins.Permission.requestGlobalSwitch(2)
    // return true
+   ```
+
+5. 如果你使用 Typescript 或者想在前端扩展插件，安装 NPM 包
+   
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-permission
+   ```
+
+   提供 `queryLikeCapacitor`, `requestLikeCapacitor` 方法类似 Capacitor 输入和输出，具体见[index.d.ts](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginPermission/src/npm/index.d.ts)
+   
+   ```typescript
+   queryLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
+   requestLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
    ```
 
 ---

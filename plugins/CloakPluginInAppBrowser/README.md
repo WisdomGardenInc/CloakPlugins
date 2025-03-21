@@ -16,6 +16,7 @@ CloakPluginInAppBrowser 是 Cloak 框架的插件之一，用于在 Cloak 应用
 1. 安装 CloakPluginInAppBrowser 插件
    ```bash
    ohpm install @wisdomgarden/cloak-plugin-inappbrowser
+   npm install @wisdomgarden/cloak-plugin-inappbrowser # optional
    ```
 
 2. 在项目 `entry/src/main/module.json5` 中声明网络访问权限。
@@ -41,6 +42,14 @@ CloakPluginInAppBrowser 是 Cloak 框架的插件之一，用于在 Cloak 应用
    ```
 
 3. 在 H5 逻辑代码中就可以直接调用该插件
+
+4. 如果你使用 Typescript 或者想在前端扩展插件，安装 NPM 包   
+   
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-inappbrowser
+   ``` 
+
+   目前 npm 包扩展了 create 方法，模仿 cordova 的风格，同时提供了 RxJS 风格的事件订阅。具体见 [index.d.ts](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginInAppBrowser/src/npm/index.d.ts)
 
 ### 示例代码
 

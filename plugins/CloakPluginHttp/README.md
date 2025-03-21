@@ -16,6 +16,7 @@ CloakPluginHttp 是 Cloak 框架的插件之一，用于在 Cloak 应用中进�
 1. 安装 CloakPluginHttp 插件
    ```bash
    ohpm install @wisdomgarden/cloak-plugin-http
+   npm install @wisdomgarden/cloak-plugin-http # optional
    ```
 
 2. 在项目 `entry/src/main/module.json5` 中声明网络访问权限。
@@ -41,6 +42,11 @@ CloakPluginHttp 是 Cloak 框架的插件之一，用于在 Cloak 应用中进�
    ```
 
 3. 在 H5 逻辑代码中就可以直接调用该插件
+
+4. 如果你使用 Typescript 或者想在前端扩展插件，安装 NPM 包
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-http
+   ```
 
 ### 示例代码
 

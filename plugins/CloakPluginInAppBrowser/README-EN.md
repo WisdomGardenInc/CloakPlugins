@@ -15,6 +15,7 @@ CloakPluginInAppBrowser is a plugin for the Cloak framework, designed to open an
 1. Install the CloakPluginInAppBrowser plugin
    ```bash
    ohpm install @wisdomgarden/cloak-plugin-inappbrowser
+   npm install @wisdomgarden/cloak-plugin-inappbrowser # optional
    ```
 
 2. Declare internet access permissions in your project's `entry/src/main/module.json5`.
@@ -40,6 +41,14 @@ CloakPluginInAppBrowser is a plugin for the Cloak framework, designed to open an
    ```
 
 3. You can now directly call the plugin in your H5 logic code.
+
+4. If you are using TypeScript or want to extend the plugin on the frontend, install the NPM package
+   
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-inappbrowser
+   ```
+
+   Currently, the npm package extends the `create` method, mimicking the Cordova style, and also provides RxJS-style event subscriptions. For more details, see [index.d.ts](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginInAppBrowser/src/npm/index.d.ts)
 
 ### Example Code
 

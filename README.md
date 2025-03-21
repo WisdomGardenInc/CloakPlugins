@@ -4,25 +4,47 @@
 
 这个项目是 [WisdomGarden](https://tronclass.com.cn/) 官方团队开发的 [Cloak](https://github.com/WisdomGardenInc/Cloak) 框架插件集合。
 
+每个插件还有配套的同名 `npm` 包，方便 `Typescript` 和前端**扩展**。
+
 ## 插件列表
 
-- **[CloakPluginPermission](./plugins/CloakPluginPermission/README.md)** `ohpm i @wisdomgarden/cloak-plugin-permission`
+- **[CloakPluginPermission](./plugins/CloakPluginPermission/README.md)**
   
   用于检查、请求 HarmonyOS 权限。
+  
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-permission
+  npm i @wisdomgarden/cloak-plugin-permission # optional
+  ```
 
-- **[CloakPluginHttp](./plugins/CloakPluginHttp/README.md)** `ohpm i @wisdomgarden/cloak-plugin-http`
+- **[CloakPluginHttp](./plugins/CloakPluginHttp/README.md)**
   
   用于在 Cloak 应用中进行 Native HTTP 请求。
 
-- **[CloakPluginInAppBrowser](./plugins/CloakPluginInAppBrowser/README.md)** `ohpm i @wisdomgarden/cloak-plugin-inappbrowser`
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-http
+  npm i @wisdomgarden/cloak-plugin-http # optional
+  ```
+
+- **[CloakPluginInAppBrowser](./plugins/CloakPluginInAppBrowser/README.md)**
   
   用于在 Cloak 应用中打再开内部浏览器，执行操作。
 
-- **[CloakPluginOpenNativeSettings](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginOpenNativeSettings/README.md)** `ohpm i @wisdomgarden/cloak-plugin-open-native-settings`
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-inappbrowser
+  npm i @wisdomgarden/cloak-plugin-inappbrowser # optional
+  ```
+
+- **[CloakPluginOpenNativeSettings](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginOpenNativeSettings/README.md)**
 
   用于在 Cloak 应用中打开原生设置页面。
 
-更多插件即将推出，敬请期待。
+  ```bash
+  ohpm i @wisdomgarden/cloak-plugin-open-native-settings
+  npm i @wisdomgarden/cloak-plugin-open-native-settings # optional
+  ```
+
+***✨✨✨ 更多插件即将推出，敬请期待。 ✨✨✨***
 
 ---
 

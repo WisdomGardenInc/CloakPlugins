@@ -15,6 +15,7 @@ CloakPluginHttp is a plugin for the Cloak framework, used for making native HTTP
 1. Install the CloakPluginHttp plugin
    ```bash
    ohpm install @wisdomgarden/cloak-plugin-http
+   npm install @wisdomgarden/cloak-plugin-http # optional
    ```
 
 2. Declare internet access permissions in your project's `entry/src/main/module.json5`.
@@ -40,6 +41,11 @@ CloakPluginHttp is a plugin for the Cloak framework, used for making native HTTP
    ```
 
 3. You can now directly call the plugin in your H5 logic code.
+
+4. If you are using TypeScript or want to extend the plugin on the frontend, install the NPM package
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-http
+   ```
 
 ### Example Code
 

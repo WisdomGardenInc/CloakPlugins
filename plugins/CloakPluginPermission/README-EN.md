@@ -16,6 +16,7 @@ CloakPluginPermission is one of the plugins of the [Cloak framework](https://git
 1. Install the CloakPluginPermission plugin
     ```bash
     ohpm install @wisdomgarden/cloak-plugin-permission
+    npm install @wisdomgarden/cloak-plugin-permission # optional
     ```
 
 2. Declare the required permissions in the project `entry/src/main/module.json5`.
@@ -95,6 +96,19 @@ CloakPluginPermission is one of the plugins of the [Cloak framework](https://git
    const result = await Cloak.plugins.Permission.requestGlobalSwitch(2)
    // return true
     ```
+
+5. If you are using TypeScript or want to extend the plugin on the frontend, install the NPM package
+   
+   ```bash
+   npm install @wisdomgarden/cloak-plugin-permission
+   ```
+   
+   Provides `queryLikeCapacitor` and `requestLikeCapacitor` methods similar to Capacitor input and output. For more details, see [index.d.ts](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginPermission/src/npm/index.d.ts)
+   
+   ```typescript
+   queryLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
+   requestLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
+   ```
 
 ---
 
