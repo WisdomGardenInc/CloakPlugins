@@ -1,0 +1,1 @@
+./scripts/build_har.sh && ./scripts/publish.sh $(cat ./tmp/build_script_selected_modules.txt)
