@@ -12,6 +12,9 @@
   <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@wisdomgarden/cloak-plugin-inappbrowser@latest/index.mjs"></script> -->
   <script type="module" src="https://mobile-download.tronclass.com.cn/cdn/cloak-plugin-inappbrowser.mjs"></script>
   <!-- <script type="module" src="/js/cloak-plugin-inappbrowser.mjs"></script> -->
+  <!-- can copy mjs file from plugin/npm to test client logic -->
+  <!-- <script type="module" src="https://cdn.jsdelivr.net/npm/@wisdomgarden/cloak-plugin-permission@latest/index.mjs"></script> --> 
+  <!-- <script type="module" src="/local_plugin.mjs"></script> -->
   <script src="./index.js"></script>
 </head>
 
@@ -34,6 +37,9 @@
       <button
         onclick="requestPermissions(['ohos.permission.LOCATION', 'ohos.permission.APPROXIMATELY_LOCATION', 'ohos.permission.CAMERA','ohos.permission.MICROPHONE'])">Request
         Permissions</button>
+
+      <button onclick="queryNotificationPermission()">QueryNotificationPermission</button>
+      <button onclick="requestNotificationPermission()">RequestNotificationPermission</button>
     </section>
     <section>
       <h2>InAppBrowser</h2>

@@ -1,6 +1,7 @@
-import { PluginMethod, CloakPlugin } from '@wisdomgarden/cloak';
+import { CloakPlugin, PluginMethod } from '@wisdomgarden/cloak';
 import { abilityAccessCtrl, bundleManager, common, Permissions } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { notificationManager } from '@kit.NotificationKit';
 import BuildProfile from '../../../BuildProfile';
 
 export default class Permission extends CloakPlugin {
@@ -98,6 +99,29 @@ export default class Permission extends CloakPlugin {
       }
       console.error('data:' + JSON.stringify(err));
     }
+    return result;
+  }
+
+  @PluginMethod()
+  async queryNotificationPermission() {
+    const result = await notificationManager.isNotificationEnabled()
+    return result;
+  }
+
+  @PluginMethod()
+  async requestNotificationPermission() {
+    let result = await this.queryNotificationPermission();
+
+    if (result) {
+      return result;
+    }
+    let context = getContext(this) as common.UIAbilityContext;
+    try {
+      await notificationManager.requestEnableNotification(context);
+    } catch (e) {
+      console.error(`requestNotificationPermission error code ${(e as BusinessError).code}, message: ${(e as BusinessError).message} aaaa`);
+    }
+    result = await this.queryNotificationPermission();
     return result;
   }
 }

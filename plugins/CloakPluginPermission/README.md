@@ -91,8 +91,16 @@ CloakPluginPermission 是 Cloak 框架的插件之一，用于检查、请求 Ha
    //    PERMISSION_GRANTED = 0
    // }
    
+   // 全局开关 https://developer.huawei.com/consumer/cn/doc/harmonyos-references/js-apis-abilityaccessctrl-V5#switchtype12
    const result = await Cloak.plugins.Permission.requestGlobalSwitch(2)
-   // return true
+   // return true/false
+
+
+   // 推送权限接口
+   queryNotificationPermission: () => Promise<boolean>;
+   // return true/false
+   requestNotificationPermission: () => Promise<boolean>;
+   // return true/false
    ```
 
 5. 如果你使用 Typescript 或者想在前端扩展插件，安装 NPM 包
@@ -104,6 +112,7 @@ CloakPluginPermission 是 Cloak 框架的插件之一，用于检查、请求 Ha
    提供 `queryLikeCapacitor`, `requestLikeCapacitor` 方法类似 Capacitor 输入和输出，具体见[index.d.ts](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginPermission/src/npm/index.d.ts)
    
    ```typescript
+   // name: camera,geolocation,microphone,notifications
    queryLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
    requestLikeCapacitor: (payload: { name: string }) => Promise<CapacitorPermissionResult>;
    ```

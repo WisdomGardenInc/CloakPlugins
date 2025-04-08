@@ -42,10 +42,30 @@ const permissionOHPermissionMap = {
   camera: "ohos.permission.CAMERA",
   geolocation: ["ohos.permission.LOCATION", "ohos.permission.APPROXIMATELY_LOCATION"],
   microphone: "ohos.permission.MICROPHONE",
+  // notifications: "ohos.permission.NOTIFICATION",
   // "photos": "ohos.permission.PHOTO",
-  // "notifications": "ohos.permission.CAMERA",
   // "clipboard-read": "ohos.permission.READ_PASTEBOARD",
   // "clipboard-write": "ohos.permission.CAMERA",
+};
+
+const _requestNotificationPermission = async () => {
+  const result = await PluginInstance.requestNotificationPermission();
+
+  if (result === true) {
+    return { state: "granted" };
+  } else {
+    return { state: "denied" };
+  }
+};
+
+const _queryNotificationPermission = async () => {
+  const result = await PluginInstance.queryNotificationPermission();
+
+  if (result === true) {
+    return { state: "granted" };
+  } else {
+    return { state: "denied" };
+  }
 };
 
 const register = (plugin) => {
@@ -57,6 +77,9 @@ const register = (plugin) => {
   plugin.registered = true;
 
   plugin.queryLikeCapacitor = async ({ name }) => {
+    if (name === "notifications") {
+      return _queryNotificationPermission(name);
+    }
     let permission = compatiblePermissionType(name);
     if (!permission) {
       return { state: "unavailable" };
@@ -67,6 +90,10 @@ const register = (plugin) => {
   };
 
   plugin.requestLikeCapacitor = async ({ name }) => {
+    if (name === "notifications") {
+      return _requestNotificationPermission(name);
+    }
+
     let permission = compatiblePermissionType(name);
     if (!permission) {
       return { state: "unavailable" };

@@ -93,8 +93,16 @@ CloakPluginPermission is one of the plugins of the [Cloak framework](https://git
     //    PERMISSION_GRANTED = 0
     // }
    
+   // Global Switch https://developer.huawei.com/consumer/en/doc/harmonyos-references/js-apis-abilityaccessctrl-V5#switchtype12
    const result = await Cloak.plugins.Permission.requestGlobalSwitch(2)
-   // return true
+   // return true/false
+
+   // Notification Permission APIs
+   const notificationPermission = await Cloak.plugins.Permission.queryNotificationPermission()
+   // return true/false
+
+   const requestNotificationResult = await Cloak.plugins.Permission.requestNotificationPermission()
+   // return true/false
     ```
 
 5. If you are using TypeScript or want to extend the plugin on the frontend, install the NPM package

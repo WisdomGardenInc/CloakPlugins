@@ -58,6 +58,20 @@ const requestPermissions = async (permissions) => {
   alert(JSON.stringify(result, null, 2));
 };
 
+const queryNotificationPermission = async () => {
+  const result = await Cloak.plugins.Permission.queryNotificationPermission();
+  alert(result);
+  // const result = await Cloak.plugins.Permission.queryLikeCapacitor({ name: "notifications" });
+  // alert(JSON.stringify(result, null, 2));
+};
+
+const requestNotificationPermission = async () => {
+  const result = await Cloak.plugins.Permission.requestNotificationPermission();
+  alert(result);
+  // const result = await Cloak.plugins.Permission.requestLikeCapacitor({ name: "notifications" });
+  // alert(JSON.stringify(result, null, 2));
+};
+
 // in app browser
 const onOpenUrl = async (url) => {
   const browser = Cloak.plugins.InAppBrowser.create(url, "_blank", { clearcache: true });
@@ -69,7 +83,7 @@ const onOpenUrl = async (url) => {
 const httpGet = async () => {
   const url = "https://api.restful-api.dev/objects";
   const response = await Cloak.plugins.Http.sendRequest(url);
-  alert(JSON.stringify(response.data, null , 2));
+  alert(JSON.stringify(response.data, null, 2));
 };
 
 const httpPost = async () => {
@@ -84,5 +98,5 @@ const httpPost = async () => {
       password: "password",
     },
   });
-  alert(JSON.stringify(response.data, null , 2));
+  alert(JSON.stringify(response.data, null, 2));
 };
