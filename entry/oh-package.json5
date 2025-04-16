@@ -11,7 +11,8 @@
     "@wisdomgarden/cloak-plugin-permission": "file:../plugins/CloakPluginPermission",
     "@wisdomgarden/cloak-plugin-inappbrowser": "file:../plugins/CloakPluginInAppBrowser",
     "@wisdomgarden/cloak-plugin-http": "file:../plugins/CloakPluginHttp",
-    "@wisdomgarden/cloak-plugin-open-native-settings": "file:../plugins/CloakPluginOpenNativeSettings"
+    "@wisdomgarden/cloak-plugin-open-native-settings": "file:../plugins/CloakPluginOpenNativeSettings",
+    "@wisdomgarden/cloak-plugin-jpush": "file:../plugins/CloakPluginJpush"
   },
   "devDependencies": {},
   "dynamicDependencies": {}
