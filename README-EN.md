@@ -44,6 +44,15 @@ Each plugin also has a corresponding `npm` package with the same name, making it
   npm i @wisdomgarden/cloak-plugin-open-native-settings # optional
   ```
 
+- **[CloakPluginJpush](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginJpush/README-EN.md)**
+
+  Used to integrate JPush in Cloak applications to receive notifications.
+
+  ```bash
+  ohpm install @wisdomgarden/cloak-plugin-jpush
+  npm install @wisdomgarden/cloak-plugin-jpush # optional
+  ```
+
 ***✨✨✨ More plugins are coming soon, stay tuned. ✨✨✨***
 
 ---

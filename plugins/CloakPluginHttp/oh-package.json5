@@ -1,6 +1,6 @@
 {
   "name": "@wisdomgarden/cloak-plugin-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Making native HTTP requests within Cloak applications.",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginHttp",
@@ -8,7 +8,7 @@
   "license": "Apache-2.0",
   "main": "Index.ets",
   "dependencies": {
-    "@wisdomgarden/cloak": "1.0.4"
+    "@wisdomgarden/cloak": "1.0.5"
   },
   "keywords": [
     "Cloak",

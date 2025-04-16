@@ -1,6 +1,6 @@
 {
   "name": "@wisdomgarden/cloak-plugin-open-native-settings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for the Cloak framework that allows opening system settings within a Cloak-based app.",
   "author": "WisdomGarden",
   "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginOpenNativeSettings",
@@ -8,7 +8,7 @@
   "license": "Apache-2.0",
   "main": "Index.ets",
   "dependencies": {
-    "@wisdomgarden/cloak": "1.0.4"
+    "@wisdomgarden/cloak": "1.0.5"
   },
   "keywords": [
     "Cloak",

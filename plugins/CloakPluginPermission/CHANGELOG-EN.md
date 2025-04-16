@@ -2,6 +2,9 @@
 
 # Changelog
 
+## 1.0.4 (2025-04-16)
+- Upgrade Cloak framework version to 1.0.5
+
 ## 1.0.3 (2025-04-08)
 - Add notification permission related APIs
   - queryNotificationPermission

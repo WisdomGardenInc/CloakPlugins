@@ -34,6 +34,44 @@ This plugin is built on top of the official JPush [@jg/push](https://ohpm.openha
       }
     )]);
    ```
+   
+   In `entry/src/main/module.json5`, configure the following:
+   
+    ```json
+    {
+      // ...
+      "module": {
+        "abilities": [
+          {
+            // ...
+            "metadata": [
+              {
+                "name": "client_id",
+                // en: Get the client_id corresponding to the application under the project on the hmos platform (note: not the project's client_id)
+                "value": "xxxxx"
+              }
+            ],
+            "skills": [
+              {
+                "entities": [
+                  "entity.system.home"
+                ],
+                "actions": [
+                  "action.system.home"
+                ]
+              },
+              {
+                "actions": [
+                  "action.ohos.push.listener"
+                ]
+              }
+            ]
+          }
+        ],
+      }
+      // ...
+    }
+    ```
 
 4. You can now use the plugin in your H5 code
     ```javascript

@@ -28,12 +28,50 @@ CloakPluginJpush 是 Cloak 框架的插件之一，用于在 Cloak 应用中集�
    new Cloak(this, [new CloakPluginJpush(
       {
         channel: isDebug ? "Development" : "Production",
-        appKey: "xxxxxx",
+        appKey: "xxxxxx", // 极光 appKey
         isDebug,
         want: jpushMessageWant ? want : null
       }
     )]);
    ```
+   
+   在 `entry/src/main/module.json5` 中配置
+   
+    ```json
+    {
+      // ...
+      "module": {
+        "abilities": [
+          {
+            // ...
+            "metadata": [
+              {
+                "name": "client_id",
+                // 在 hmos 平台获取到项目下所在应用对应的 client_id（注意不是项目的client_id）
+                "value": "xxxxx"
+              }
+            ],
+            "skills": [
+              {
+                "entities": [
+                  "entity.system.home"
+                ],
+                "actions": [
+                  "action.system.home"
+                ]
+              },
+              {
+                "actions": [
+                  "action.ohos.push.listener"
+                ]
+              }
+            ]
+          }
+        ],
+      }
+      // ...
+    }
+    ```
 
 4. 在 H5 逻辑代码中就可以直接调用该插件
     ```javascript

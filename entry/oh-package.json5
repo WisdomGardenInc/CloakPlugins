@@ -7,7 +7,7 @@
   "homepage": "https://tronclass.com.cn/",
   "license": "Apache-2.0",
   "dependencies": {
-    "@wisdomgarden/cloak": "1.0.4",
+    "@wisdomgarden/cloak": "1.0.5",
     "@wisdomgarden/cloak-plugin-permission": "file:../plugins/CloakPluginPermission",
     "@wisdomgarden/cloak-plugin-inappbrowser": "file:../plugins/CloakPluginInAppBrowser",
     "@wisdomgarden/cloak-plugin-http": "file:../plugins/CloakPluginHttp",

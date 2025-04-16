@@ -9,7 +9,7 @@
   "main": "Index.ets",
   "dependencies": {
     "@jg/push": "^1.2.0",
-    "@wisdomgarden/cloak": "1.0.4"
+    "@wisdomgarden/cloak": "1.0.5"
   },
   "keywords": [
     "Cloak",
