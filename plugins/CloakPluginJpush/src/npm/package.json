@@ -1,0 +1,27 @@
+{
+  "name": "@wisdomgarden/cloak-plugin-jpush",
+  "version": "1.0.0",
+  "description": "Send HarmonyOS Notification using JPush",
+  "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginJpush",
+  "homepage": "https://tronclass.com.cn/",
+  "license": "Apache-2.0",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "prepack": "cp ../../README*.md . && cp ../../LICENSE ."
+  },
+  "keywords": [
+    "Cloak",
+    "HarmonyOS",
+    "Cordova",
+    "Capacitor",
+    "Hybrid",
+    "H5",
+    "Webview",
+    "notification",
+    "jiguang",
+    "jpush"
+  ]
+}
