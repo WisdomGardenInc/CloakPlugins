@@ -100,3 +100,7 @@ const httpPost = async () => {
   });
   alert(JSON.stringify(response.data, null, 2));
 };
+
+const scan = () => {
+  Cloak.plugins.CodeScanner.scan();
+}

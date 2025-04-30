@@ -6,7 +6,7 @@ import { CloakPluginPermission } from '@wisdomgarden/cloak-plugin-permission'
 import { CloakPluginInAppBrowser } from '@wisdomgarden/cloak-plugin-inappbrowser'
 import { CloakPluginHttp } from '@wisdomgarden/cloak-plugin-http'
 import { CloakPluginOpenNativeSettings } from '@wisdomgarden/cloak-plugin-open-native-settings'
-import { CloakPluginJpush } from '@wisdomgarden/cloak-plugin-jpush'
+import { CodeScanner } from '@wisdomgarden/cloak-plugin-code-scanner'
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
@@ -15,7 +15,7 @@ export default class EntryAbility extends UIAbility {
 
     new Cloak(this,
       [new CloakPluginPermission(), new CloakPluginInAppBrowser(), new CloakPluginHttp(),
-        new CloakPluginOpenNativeSettings()]);
+        new CloakPluginOpenNativeSettings(), new CodeScanner()]);
   }
 
   onDestroy(): void {

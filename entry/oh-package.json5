@@ -12,7 +12,8 @@
     "@wisdomgarden/cloak-plugin-inappbrowser": "file:../plugins/CloakPluginInAppBrowser",
     "@wisdomgarden/cloak-plugin-http": "file:../plugins/CloakPluginHttp",
     "@wisdomgarden/cloak-plugin-open-native-settings": "file:../plugins/CloakPluginOpenNativeSettings",
-    "@wisdomgarden/cloak-plugin-jpush": "file:../plugins/CloakPluginJpush"
+    "@wisdomgarden/cloak-plugin-jpush": "file:../plugins/CloakPluginJpush",
+    "@wisdomgarden/cloak-plugin-code-scanner": "file:../plugins/CloakPluginCodeScanner"
   },
   "devDependencies": {},
   "dynamicDependencies": {}

@@ -1,0 +1,27 @@
+{
+  "name": "@wisdomgarden/cloak-plugin-code-scanner",
+  "version": "1.0.0",
+  "description": "A plugin for the Cloak framework that enables scanning QR code",
+  "author": "WisdomGarden",
+  "repository": "https://github.com/WisdomGardenInc/CloakPlugins/tree/master/plugins/CloakPluginCodeScanner",
+  "homepage": "https://tronclass.com.cn/",
+  "license": "Apache-2.0",
+  "main": "index.mjs",
+  "module": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "prepack": "cp ../../README*.md . && cp ../../LICENSE ."
+  },
+  "keywords": [
+    "Cloak",
+    "CloakPlugin",
+    "HarmonyOS",
+    "Cordova",
+    "Capacitor",
+    "Hybrid",
+    "H5",
+    "Webview",
+    "code-scanner",
+    "qrcode"
+  ]
+}
