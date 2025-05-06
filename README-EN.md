@@ -53,6 +53,15 @@ Each plugin also has a corresponding `npm` package with the same name, making it
   npm install @wisdomgarden/cloak-plugin-jpush # optional
   ```
 
+- **[CloakPluginCodeScanner](https://github.com/WisdomGardenInc/CloakPlugins/blob/master/plugins/CloakPluginCodeScanner/README-EN.md)**
+
+  Used for QR code scanning in Cloak applications.
+
+  ```bash
+  ohpm install @wisdomgarden/cloak-plugin-code-scanner
+  npm install @wisdomgarden/cloak-plugin-code-scanner # optional
+  ```
+
 ***✨✨✨ More plugins are coming soon, stay tuned. ✨✨✨***
 
 ---
